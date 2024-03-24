@@ -37,7 +37,7 @@ Inside `/etc/logrotate.d/openresty`, import these configurations:
 }
 ```
 
-3. You will now need to edit the `/lib/systemd/system/logrotate.service` file, otherwise you'll get an error
+3. You will now need to edit the `/lib/systemd/system/logrotate.service` file, otherwise you won't be able to rotate these logs due to them being in a different directory from the default
 
 ```
 sudo vim /lib/systemd/system/logrotate.service
