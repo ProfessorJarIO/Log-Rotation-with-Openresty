@@ -49,4 +49,18 @@ Inside `/lib/systemd/system/logrotate.service`, add the following line at the ve
 ReadWritePaths=/usr/local/openresty/nginx/logs
 ```
 
+4. Reload daemon and restart the logrotate service
+
+```
+sudo systemctl daemon-reload && systemctl start logrotate
+```
+
+5. (OPTIONAL) - If you want to see if logrotate works with your log files, run the following command:
+
+```
+sudo logrotate -f /etc/logrotate.d/openresty
+```
+
+You'll see that logrotate has successfully rotated your log files!
+
 There you go! I believe that's all you need to do in order to use Logrotate with Openresty. Once again, tweak these settings to how you need it. You may want different permissions, users/groups, directories, filenames, etc...
