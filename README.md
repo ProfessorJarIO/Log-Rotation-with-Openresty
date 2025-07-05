@@ -52,7 +52,7 @@ ReadWritePaths=/usr/local/openresty/nginx/logs
 4. Reload daemon and restart the logrotate service
 
 ```
-sudo systemctl daemon-reload && systemctl start logrotate
+sudo systemctl daemon-reload && sudo systemctl start logrotate
 ```
 
 5. (OPTIONAL) - If you want to see if logrotate works with your log files, run the following command:
